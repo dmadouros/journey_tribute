@@ -20,4 +20,10 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  band:
+    name:
+      plain: Eclipse
+      emphasis: ECLIPSE
+      possesive: Eclipse's
+      possesive-emphasis: ECLIPSE's
+

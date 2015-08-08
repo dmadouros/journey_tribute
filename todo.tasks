@@ -1,25 +1,42 @@
- ☐ install haml
+ Setup:
  ☐ install marionette
- ☐ install bootstrap or install foundation
- ☐ setup home page (hard coded)
- ☐ setup header
- ☐ setup nav
- ☐ setup footer
 
 Pages:
- ☐ Home
- ☐ The Band
- ☐ Media
- ☐ Shows
- ☐ Contact Us
+  Home:
+   ☐ Make next show dynamic
+  Media:
+   ☐ Add pages for photos
+   ☐ Add embedded videos
+  Shows:
+   ☐ Make shows dynamic
+  Contact Us:
 
+Make Linkable:
  ☐ Facebook
  ☐ Twitter
  ☐ Myspace??
  ☐ YouTube
 
- ☐ Story
- ☐ Music (albums w/ popups)
- ☐ Website (external)
- ☐ Merchandise (external)
- ☐ Press Kit
+ Music (albums w/ popups):
+  ☐ Add remaining copy
+ Press Kit:
+  ☐ Add copy
+  ☐ Get pdf version
+
+Misc:
+  ☐ Adjust color scheme
+
+
+＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿
+Archive:
+ ✔ Add dialogs to albums @done (15-08-08 10:29) @project(Make Linkable / Music (albums w/ popups))
+ ✔ install haml @done (15-08-03 07:28)
+ ✔ install bootstrap or install foundation @done (15-08-03 07:28)
+ ✔ setup home page (hard coded) @done (15-08-03 07:28)
+ ✔ setup header @done (15-08-03 07:28)
+ ✔ setup nav @done (15-08-03 07:28)
+ ✔ setup footer @done (15-08-03 07:28)
+ ✔ The Band @done (15-08-03 07:30) @project(Pages)
+ ✔ Story @done (15-08-03 07:29) @project(Make Linkable)
+ ✔ Website (external) @done (15-08-03 07:29) @project(Make Linkable)
+ ✔ Merchandise (external) @done (15-08-03 07:29) @project(Make Linkable)

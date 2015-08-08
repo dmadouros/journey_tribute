@@ -1,0 +1,38 @@
+// "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
+@import "bootstrap-sprockets";
+
+// Scaffolding
+//$body-bg:    #e8e8e8;
+//$text-color: white + 50;
+//$jumbotron-color: black;
+//$panel-bg: black;
+$navbar-border-radius: 0;
+
+@import "bootstrap";
+
+.navbar {
+  border-bottom-left-radius: $border-radius-base;
+  border-bottom-right-radius: $border-radius-base;
+}
+
+.header {
+  background-color: #000;
+}
+
+.img-social-media {
+  width: 40px;
+  height: 40px;
+}
+.footer {
+  margin-bottom: 20px;
+}
+
+.band-member {
+  float: left;
+  margin-right: 10px;
+}
+
+.superscript {
+  vertical-align: super;
+  font-size: x-small;
+}

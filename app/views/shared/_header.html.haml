@@ -1,0 +1,42 @@
+.row.header.text-center
+  .col-med-12
+    %a{href: root_path}
+      %img= image_tag('band_logo.jpg')
+.row
+  .navbar.navbar-inverse
+    %ul.nav.navbar-nav
+      %li.active
+        %a{href: root_path}
+          Home
+        %li
+          %a{href: band_path}
+            The Band
+        %li
+          %a{href: media_path}
+            Media
+        %li
+          %a{href: shows_path}
+            Shows
+        %li
+          %a{href: contact_path}
+            Contact Us
+        %li
+          %a{href: 'http://www.cafepress.com/eclipsethemusicofjourney', target: 'new'}
+            Merchandise
+            %span.glyphicon.glyphicon-new-window{style: 'font-size: smaller;'}
+        %li
+          %a
+            Press Kit
+        %li
+          .navbar-text
+            |
+        %li
+          %a{href: story_path}
+            Journey: The Story
+        %li
+          %a{href: billboard_path}
+            Journey: The Music
+        %li
+          %a{href: 'http://www.journeymusic.com'}
+            Journey: Website
+            %span.glyphicon.glyphicon-new-window{style: 'font-size: smaller;'}
