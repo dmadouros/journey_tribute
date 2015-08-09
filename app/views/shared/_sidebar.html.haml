@@ -8,16 +8,41 @@
       %img= image_tag('youtube.png', class: 'img-social-media')
     %li
     %img= image_tag('myspace.png', class: 'img-social-media')
-.panel.panel-info
-  .panel-heading
-    %strong Next Show
-  .panel-body
-    Saturday, August 1, 2015 (1:00pm - 1:45pm)
-    %br
-    %strong Leftapalooza (Left Hand Brewery Co)
-    %br
-    1265 Boston Ave, Longmont, CO 80501
-    %br
-    %br
-    %a.btn.btn-info
-      Details
+- if @next_show.present?
+  .panel.panel-info
+    .panel-heading
+      %strong Next Show
+    .panel-body
+      %span.date
+        = @next_show.starts_at
+      %span.time
+        (
+        = @next_show.starts_at
+        -
+        = @next_show.ends_at
+        )
+      %br
+      %strong
+        %span.show-name
+          = @next_show.name
+        (
+        %span.venue-name<>
+          = @next_show.venue.name
+        )
+      %br
+      %span
+        %span.address_1<>
+          = @next_show.venue.address_1
+        ,
+      %span
+        %span.city<>
+          = @next_show.venue.city
+        ,
+      %span.state
+        = @next_show.venue.state
+      %span.zip-code
+        = @next_show.venue.zip_code
+      %br
+      %br
+      %a.btn.btn-info
+        Details

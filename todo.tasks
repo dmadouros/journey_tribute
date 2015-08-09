@@ -1,34 +1,41 @@
  Setup:
  ☐ install marionette
-
 Pages:
   Home:
-   ☐ Make next show dynamic
   Media:
    ☐ Add pages for photos
    ☐ Add embedded videos
-  Shows:
-   ☐ Make shows dynamic
+  Calendar:
+   ☐ Make Past Shows work
+   ☐ Make Details work (including Next Show)
+   ☐ format dates
   Contact Us:
-
+   ☐ Make form do something
 Make Linkable:
  ☐ Facebook
  ☐ Twitter
  ☐ Myspace??
  ☐ YouTube
-
- Music (albums w/ popups):
+Music (albums w/ popups):
   ☐ Add remaining copy
- Press Kit:
+Press Kit:
   ☐ Add copy
   ☐ Get pdf version
-
+Story:
+  ☐ Fix beginning copy
 Misc:
   ☐ Adjust color scheme
+  ☐ Fix current page highlight in menu
+Admin:
+ ☐ Add admin section for venues
+ ☐ Add admin section for shows
+ ☐ Add authentication/authorization for admin section
 
 
 ＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿
 Archive:
+ ✔ Make next show dynamic @done (15-08-08 19:24) @project(Pages / Home)
+ ✔ Make shows dynamic @done (15-08-08 19:24) @project(Pages / Calendar)
  ✔ Add dialogs to albums @done (15-08-08 10:29) @project(Make Linkable / Music (albums w/ popups))
  ✔ install haml @done (15-08-03 07:28)
  ✔ install bootstrap or install foundation @done (15-08-03 07:28)

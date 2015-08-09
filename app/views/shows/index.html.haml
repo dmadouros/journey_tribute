@@ -1,0 +1,54 @@
+%h1 Calendar
+%table.table
+  %tr
+    %th
+      Date
+    %th
+      Time
+    %th
+      City
+    %th
+      Venue
+    %th
+      &nbsp;
+  - if @shows.empty?
+    %tr
+      %td{colspan: 5}
+        No Shows Scheduled
+  - else
+    - @shows.each do |show|
+      %tr
+      %td
+        =show.starts_at
+      %td
+        =show.starts_at
+      %td
+        =show.venue.city
+      %td
+        =show.name
+      %td
+        %a{href: '#'}
+          Details
+%a{href: '#'}
+  Past Dates
+
+%table.table
+  %tr
+    %th
+      Date
+    %th
+      Time
+    %th
+      City
+    %th
+      Venue
+  - @past.each do |show|
+    %tr
+    %td
+      =show.starts_at
+    %td
+      =show.starts_at
+    %td
+      =show.venue.city
+    %td
+      =show.name
