@@ -20,9 +20,16 @@
 //= require backbone.marionette
 //= require_self
 
-$(function() {
-  $('.past-dates').click(function() {
+var ready = function() {
+  $('.past-dates').click(function(e) {
+    e.preventDefault();
     $('#past-shows-region').toggleClass('is-hidden');
     $('.past-dates').remove();
   });
-})
+};
+
+$(function() {
+  ready();
+});
+
+$(document).on('page:load', ready);
