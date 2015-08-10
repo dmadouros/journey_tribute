@@ -10,13 +10,22 @@ $navbar-border-radius: 0;
 
 @import "bootstrap";
 
+body {
+  //background-image: image-url("carbon_fiber.jpg")
+  background-color: black;
+}
+
+.container {
+  background-color: white;
+}
+
 .navbar {
   border-bottom-left-radius: $border-radius-base;
   border-bottom-right-radius: $border-radius-base;
 }
 
 .header {
-  background-color: #000;
+  //background-color: #000;
 }
 
 .img-social-media {
@@ -35,4 +44,23 @@ $navbar-border-radius: 0;
 .superscript {
   vertical-align: super;
   font-size: x-small;
+}
+
+.song {
+  margin-bottom: 1em;
+}
+.song-title {
+  font-weight: bold;
+}
+.song-writers {
+  font-style: italic;
+}
+
+.footnote {
+  font-size: smaller;
+  font-style: italic;
+}
+
+.is-hidden {
+  display: none;
 }

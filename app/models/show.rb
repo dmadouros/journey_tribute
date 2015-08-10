@@ -10,6 +10,6 @@ class Show < ActiveRecord::Base
   end
 
   def self.past
-    Show.where('starts_at < current_timestamp').order(starts_at: :asc)
+    Show.where('starts_at < current_timestamp').order(starts_at: :desc)
   end
 end

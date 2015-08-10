@@ -1,0 +1,14 @@
+%tr
+  %td
+    =show.starts_at.strftime('%b %e, %Y')
+  - unless past
+    %td
+      =show.starts_at.strftime('%l:%M%P')
+  %td
+    =show.venue.city
+  %td
+    =show.name
+  - unless past
+    %td
+      %a{href: '#'}
+        Details

@@ -1,3 +1,5 @@
+= content_for :page, "media"
+
 %h1 Media
 %h2 Set List
 %table
@@ -41,17 +43,70 @@
         %li Who's Cryin' Now
 
 %h2 Photos
-%ul
-  %li Highlands Ranch Summer Concert Series
-  %li Parker Days
-  %li The Boulder Theater
-  %li Lakewood Summer Concert Series
-  %li Leftapalooza
-  %li Highlands Ranch 4th of July Celebration
-  %li The D-Note
+%h3 Highlands Ranch Summer Concert Series
+%h3 Parker Days
+#parker-days.carousel.slide{"data-ride" => "carousel"}
+  %ol.carousel-indicators
+    %li.active{"data-target" => "#parker-days", "data-slide-to" => "0"}
+
+  .carousel-inner{"role" => "listbox"}
+    .item.active
+      %img{"src" => "http://www.eclipsetheband.biz/slides/ParkerDays.jpg"}
+
+  %a.left.carousel-control{"href" => "#parker-days", "role" => "button", "data-slide" => "prev"}
+    %span.glyphicon.glyphicon-chevron-left{"aria-hidden" => "true"}
+    %span.sr-only Previous
+  %a.right.carousel-control{"href" => "#parker-days", "role" => "button", "data-slide" => "next"}
+    %span.glyphicon.glyphicon-chevron-right{"aria-hidden" => "true"}
+    %span.sr-only Next
+%h3 The Boulder Theater
+#boulder-threater.carousel.slide{"data-ride" => "carousel"}
+  %ol.carousel-indicators
+    %li.active{"data-target" => "#boulder-threater", "data-slide-to" => "0"}
+    %li{"data-target" => "#boulder-threater", "data-slide-to" => "1"}
+    %li{"data-target" => "#boulder-threater", "data-slide-to" => "2"}
+    %li{"data-target" => "#boulder-threater", "data-slide-to" => "3"}
+    %li{"data-target" => "#boulder-threater", "data-slide-to" => "4"}
+    %li{"data-target" => "#boulder-threater", "data-slide-to" => "5"}
+    %li{"data-target" => "#boulder-threater", "data-slide-to" => "6"}
+    %li{"data-target" => "#boulder-threater", "data-slide-to" => "7"}
+
+  .carousel-inner{"role" => "listbox"}
+    .item.active
+      %img{"src" => "http://www.eclipsetheband.biz/slides/M1.jpg"}
+    .item
+      %img{"src" => "http://www.eclipsetheband.biz/slides/M2.jpg"}
+    .item
+      %img{"src" => "http://www.eclipsetheband.biz/slides/DD3.jpg"}
+    .item
+      %img{"src" => "http://www.eclipsetheband.biz/slides/DD5.jpg"}
+    .item
+      %img{"src" => "http://www.eclipsetheband.biz/slides/J1.jpg"}
+    .item
+      %img{"src" => "http://www.eclipsetheband.biz/slides/J2.jpg"}
+    .item
+      %img{"src" => "http://www.eclipsetheband.biz/slides/B1.jpg"}
+    .item
+      %img{"src" => "http://www.eclipsetheband.biz/slides/B2.jpg"}
+
+  %a.left.carousel-control{"href" => "#boulder-threater", "role" => "button", "data-slide" => "prev"}
+    %span.glyphicon.glyphicon-chevron-left{"aria-hidden" => "true"}
+    %span.sr-only Previous
+  %a.right.carousel-control{"href" => "#boulder-threater", "role" => "button", "data-slide" => "next"}
+    %span.glyphicon.glyphicon-chevron-right{"aria-hidden" => "true"}
+    %span.sr-only Next
+
+
+%h3 Lakewood Summer Concert Series
+%h3 Leftapalooza
+%h3 Highlands Ranch 4th of July Celebration
+%h3 The D-Note
 
 %h2 Videos
-%ul
-  %li Separate Ways
-  %li Escape
-  %li Who's Cryin' Now
+%ul.list-inline
+  %li.thumbnail
+    <iframe width="420" height="315" src="https://www.youtube.com/embed/tHrnY4mporo" frameborder="0" allowfullscreen></iframe>
+  %li.thumbnail
+    <iframe width="420" height="315" src="https://www.youtube.com/embed/ha-AbNM79Nw" frameborder="0" allowfullscreen></iframe>
+  %li.thumbnail
+    <iframe width="420" height="315" src="https://www.youtube.com/embed/y4QpQNoMHls" frameborder="0" allowfullscreen></iframe>

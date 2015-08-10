@@ -1,25 +1,29 @@
 .social-media.clearfix
   %ul.list-inline.pull-right
     %li
-      %img= image_tag('facebook.png', class: 'img-social-media')
+      %a{href: 'http://www.facebook.com/eclipsemusicofjourney', target: 'new'}
+        %img= image_tag('facebook.png', class: 'img-social-media')
     %li
-      %img= image_tag('twitter.png', class: 'img-social-media')
+      %a{href: 'https://twitter.com/eclipsejourney', target: 'new'}
+        %img= image_tag('twitter.png', class: 'img-social-media')
     %li
-      %img= image_tag('youtube.png', class: 'img-social-media')
+      %a{href: 'http://www.youtube.com/eclipsemusicjourney', target: 'new'}
+        %img= image_tag('youtube.png', class: 'img-social-media')
     %li
-    %img= image_tag('myspace.png', class: 'img-social-media')
+      %a{href: 'https://myspace.com/eclipse910', target: 'new'}
+        %img= image_tag('myspace.png', class: 'img-social-media')
 - if @next_show.present?
   .panel.panel-info
     .panel-heading
       %strong Next Show
     .panel-body
       %span.date
-        = @next_show.starts_at
+        = @next_show.starts_at.strftime('%A, %B %e, %Y')
       %span.time
         (
-        = @next_show.starts_at
-        -
-        = @next_show.ends_at
+        = @next_show.starts_at.strftime('%l:%M %P')
+        \-
+        = @next_show.ends_at.strftime('%l:%M %P')
         )
       %br
       %strong
@@ -30,10 +34,8 @@
           = @next_show.venue.name
         )
       %br
-      %span
-        %span.address_1<>
-          = @next_show.venue.address_1
-        ,
+      %div.address_1
+        = @next_show.venue.address_1
       %span
         %span.city<>
           = @next_show.venue.city
