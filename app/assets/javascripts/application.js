@@ -22,7 +22,7 @@
 
 $(function() {
   $('.past-dates').click(function() {
-    $('#past-shows-region').toggle();
+    $('#past-shows-region').toggleClass('is-hidden');
     $('.past-dates').remove();
   });
 })
