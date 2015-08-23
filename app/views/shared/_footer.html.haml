@@ -1,14 +1,17 @@
-.row.footer.text-center
+.row.footer
   %hr
-    %p.disclaimer
+    %small.disclaimer.text-left
       %span= t('band.name.plain')
       is a Journey tribute band and is not sponsored, endorsed, or affiliated
       with Journey, or its current or former members.  Product names, logos,
       brands, and other trademarks featured or referred to within
-      eclipsetheband.biz remain property of their respective trademark holders
+      this site remain property of their respective trademark holders
       and are used solely for descriptive or identification purposes.
   %hr
-  .col-md-12
-    Copyright &copy;
+  .col-md-12.text-center
+    &copy;
     %span= Time.now.year
-    Eclipse the Band
+    &nbsp;
+    %span<>
+      = t('band.name.plain')
+    \. All rights reserved.
