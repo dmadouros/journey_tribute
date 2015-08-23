@@ -1,42 +1,52 @@
+%nav.navbar.navbar-inverse.navbar-fixed-top
+  .container-fluid
+    .navbar-header
+      %button.navbar-toggle.collapsed{'type' => 'button', 'data-toggle' => 'collapse', 'data-target' => 'main-menu', 'aria-expanded' => false}
+        %span.sr-only
+          Toggle Navigation
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      %a.navbar-brand{href: root_path}
+        = t('band.name.plain')
+    .collapse.navbar-collapse
+      %ul.nav.navbar-nav
+        %li{class: (yield(:page) == 'home' ? 'active' : '')}
+          %a{href: root_path}
+            Home
+        %li{class: (yield(:page) == 'band' ? 'active' : '')}
+          %a{href: band_path}
+            The Band
+        %li{class: (yield(:page) == 'media' ? 'active' : '')}
+          %a{href: media_path}
+            Media
+        %li{class: (yield(:page) == 'shows' ? 'active' : '')}
+          %a{href: shows_path}
+            Shows
+        %li{class: (yield(:page) == 'contact' ? 'active' : '')}
+          %a{href: contact_path}
+            Contact Us
+        %li
+          %a{href: 'http://www.cafepress.com/eclipsethemusicofjourney', target: 'new'}
+            Merchandise
+            %span.glyphicon.glyphicon-new-window{style: 'font-size: smaller;'}
+        %li{class: (yield(:page) == 'press_kit' ? 'active' : '')}
+          %a{href: epk_path}
+            Press Kit
+        %li
+          .navbar-text
+            |
+          %li{class: (yield(:page) == 'story' ? 'active' : '')}
+            %a{href: story_path}
+              Journey: The Story
+          %li{class: (yield(:page) == 'music' ? 'active' : '')}
+            %a{href: billboard_path}
+              Journey: The Music
+          %li
+            %a{href: 'http://www.journeymusic.com'}
+              Journey: Website
+              %span.glyphicon.glyphicon-new-window{style: 'font-size: smaller;'}
 .row.header.text-center
   .col-med-12
     %a{href: root_path}
       %img= image_tag('band_logo.jpg', width: '1170', height: '200')
-.row
-  .navbar.navbar-default
-    %ul.nav.navbar-nav
-      %li{class: (yield(:page) == 'home' ? 'active' : '')}
-        %a{href: root_path}
-          Home
-      %li{class: (yield(:page) == 'band' ? 'active' : '')}
-        %a{href: band_path}
-          The Band
-      %li{class: (yield(:page) == 'media' ? 'active' : '')}
-        %a{href: media_path}
-          Media
-      %li{class: (yield(:page) == 'shows' ? 'active' : '')}
-        %a{href: shows_path}
-          Shows
-      %li{class: (yield(:page) == 'contact' ? 'active' : '')}
-        %a{href: contact_path}
-          Contact Us
-      %li
-        %a{href: 'http://www.cafepress.com/eclipsethemusicofjourney', target: 'new'}
-          Merchandise
-          %span.glyphicon.glyphicon-new-window{style: 'font-size: smaller;'}
-      %li{class: (yield(:page) == 'press_kit' ? 'active' : '')}
-        %a{href: epk_path}
-          Press Kit
-      %li
-        .navbar-text
-          |
-      %li{class: (yield(:page) == 'story' ? 'active' : '')}
-        %a{href: story_path}
-          Journey: The Story
-      %li{class: (yield(:page) == 'music' ? 'active' : '')}
-        %a{href: billboard_path}
-          Journey: The Music
-      %li
-        %a{href: 'http://www.journeymusic.com'}
-          Journey: Website
-          %span.glyphicon.glyphicon-new-window{style: 'font-size: smaller;'}
