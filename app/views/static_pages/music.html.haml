@@ -1,9 +1,11 @@
 = content_for :page, "music"
 %h1 Journey: The Music
 %h2
-  The Albumns
+  The Albums
   %span{style: 'text-align: superscript'}<>
     *
+  %small
+    (click an album cover for more info)
 %ul.list-inline
   %li
     %a.thumbnail{href: '#', 'data-toggle' => 'modal', 'data-target' => '#journey'}= image_tag('journey.jpg')
