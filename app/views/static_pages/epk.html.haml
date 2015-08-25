@@ -1,8 +1,12 @@
 %h1= t('band.name.plain')
 %h2 About Us
 %p
-  %strong.text-uppercase= t('band.name.plain')
-  captures and recreates the spirit, sound and innovation that is the live
+  %span
+    %strong.text-uppercase<>
+      = t('band.name.plain')
+    ,
+  (formally Eclipse), is a Journey Tribute Band that captures and recreates
+  the spirit, sound and innovation that is the live
   Journey experience. From the angelic vocal styles of Steve Perry to the
   eclectic but yet delicate guitar works of Neal Schon, the keyboard wizardries
   of Greg Rolie and Jonathan Cain combined with the intricate bass and
@@ -16,8 +20,7 @@
       = t('band.name.plain')
     's
   audiences can dance and sing along to all of Journey’s power ballads and chart
-  topping hits. The music of Journey has an enduring appeal that appeals to fans
-  of all ages. Guests at this concert should expect a lot of high-energy fun and
+  topping hits. Guests at this concert should expect a lot of high-energy fun and
   maybe even a few surprises!
 %p
   Audiences will absolutely find themselves dancing and singing the power
@@ -147,12 +150,26 @@
         %li Wheel In The Sky
         %li Where Were You
         %li Who's Cryin' Now
-%img= image_tag('stage_plot.jpg', width: 750)
-%p
-  Click
-  %a{href: "#{root_url}EclipseStagePlot.pdf", target: '_blank'}
-    here
-  for our stage plot
+%h2 Stage Plots
+%h3
+  With In-Ear Monitor
+  %small
+    (click
+    %a{href: image_url('Journey Thru Time-With In-Ear Monitor.jpg'), target: '_blank'}
+      here
+    to open in new window)
+
+%img= image_tag('Journey Thru Time-With In-Ear Monitor.jpg', width: 750)
+
+%h3
+  Without In-Ear Monitor
+  %small
+    (click
+    %a{href: image_url('Journey Thru Time-Without In Ear Monitor.jpg'), target: '_blank'}
+      here
+    to open in new window)
+%img= image_tag('Journey Thru Time-Without In Ear Monitor.jpg', width: 750)
+
 %p
   Click
   %a{href: "#{root_url}epk.pdf", target: '_blank'}
@@ -160,5 +177,5 @@
   for a printable EPK
 %p
   For contact information, please email Michael Miller at
-  %a{href: 'mailto:info@eclipsetheband.biz'}
-    info@eclipsetheband.biz
+  %a{href: 'mailto:info@journeythrutime.com'}
+    info@journeythrutime.com
