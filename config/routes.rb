@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get 'story' => 'static_pages#story'
   get 'billboard' => 'static_pages#music'
   get 'epk' => 'static_pages#epk'
+  get 'calendar' => 'shows#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
