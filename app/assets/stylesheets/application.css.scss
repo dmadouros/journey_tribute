@@ -1,28 +1,19 @@
 // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
 @import "bootstrap-sprockets";
 
-// Scaffolding
-//$body-bg:    #e8e8e8;
-//$text-color: white + 50;
-//$jumbotron-color: black;
-//$panel-bg: black;
 $navbar-border-radius: 0;
+$grid-float-breakpoint: 1250px;
 
 @import "bootstrap";
 
 body {
   //background-image: image-url("carbon_fiber.jpg")
   background-color: white;
-  padding-top: 70px;
+  padding-top: 51px;
 }
 
 .container {
   background-color: white;
-}
-
-.navbar {
-  border-bottom-left-radius: $border-radius-base;
-  border-bottom-right-radius: $border-radius-base;
 }
 
 .header {
