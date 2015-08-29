@@ -3,9 +3,6 @@ Pages:
    ☐ Add pages for photos
   Calendar:
    ☐ Make Details work (including Next Show)
-  Contact Us:
-   ☐ Make form do something
-Misc:
 Admin:
  ☐ Add admin section for venues
  ☐ Add admin section for shows
@@ -14,6 +11,7 @@ Admin:
 
 ＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿
 Archive:
+ ✔ Make form do something @done (15-08-29 12:58) @project(Pages / Contact Us)
  ✔ Adjust color scheme @done (15-08-29 10:21) @project(Misc)
  ✔ Get pdf version @done (15-08-10 20:27) @project(Press Kit)
  ✔ Add copy @done (15-08-10 20:27) @project(Press Kit)
