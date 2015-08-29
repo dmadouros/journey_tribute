@@ -1,13 +1,16 @@
 Rails.application.routes.draw do
   resources :shows
+
   root 'static_pages#home'
   get 'band' => 'static_pages#band'
   get 'media' => 'static_pages#media'
-  get 'contact' => 'static_pages#contact'
   get 'story' => 'static_pages#story'
   get 'billboard' => 'static_pages#music'
   get 'epk' => 'static_pages#epk'
   get 'calendar' => 'shows#index'
+
+  get 'contact' => 'contact#new'
+  post 'contact' => 'contact#create'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

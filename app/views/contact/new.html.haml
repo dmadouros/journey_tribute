@@ -1,4 +1,9 @@
 = content_for :page, "contact"
+- if flash[:thanks]
+  %p.alert.alert-success.alert-dismissible
+    %button.close{type: 'button', 'data-dismiss' => 'alert', 'aria-label' => 'Close'}
+      %span{'aria-hidden' => 'true'} &times;
+    Thanks for contacting us!
 %h1 Contact Us
 %h2 Email Subscriptions or Comments
 %p
@@ -6,29 +11,28 @@
 %h2 Booking Information
 %p
   To book a performance for specific venues, including private parties and public events, please use the contact form provided below. We will get back with you as soon as possible!
-%form
+= form_tag(controller: "contact", action: "create") do
   %fieldset
     .form-group
       %label
         Reason
-      %select.form-control
+      %select.form-control{name: 'reason'}
         %option Book the Band
         %option Comments
         %option Subscribe to Email Listing
         %option Unsubscribe from Email Listing
     .form-group
       %label First Name
-      %input.form-control{type: 'text'}
+      %input.form-control{type: 'text', name: 'first_name'}
     .form-group
       %label Last Name
-      %input.form-control{type: 'text'}
+      %input.form-control{type: 'text', name: 'last_name'}
     .form-group
       %label Email
-      %input.form-control{type: 'text'}
+      %input.form-control{type: 'text', name: 'email'}
     .form-group
       %label Comments
-      %textarea.form-control{rows: 10}
-    .btn.btn-primary
-      Submit
+      %textarea.form-control{rows: 10, name: 'comments'}
+    = submit_tag "Submit", class: 'btn btn-primary'
     .btn.btn-default
       Reset
