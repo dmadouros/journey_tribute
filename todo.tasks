@@ -6,7 +6,6 @@ Pages:
   Contact Us:
    ☐ Make form do something
 Misc:
-  ☐ Adjust color scheme
 Admin:
  ☐ Add admin section for venues
  ☐ Add admin section for shows
@@ -15,8 +14,9 @@ Admin:
 
 ＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿
 Archive:
- ✔ Add copy @done (15-08-10 20:27) @project(Press Kit)
+ ✔ Adjust color scheme @done (15-08-29 10:21) @project(Misc)
  ✔ Get pdf version @done (15-08-10 20:27) @project(Press Kit)
+ ✔ Add copy @done (15-08-10 20:27) @project(Press Kit)
  ✔ Make Past Shows work @done (15-08-09 22:05) @project(Pages / Calendar)
  ✔ Fix current page highlight in menu @done (15-08-09 21:20) @project(Misc)
  ✔ install marionette @done (15-08-09 20:03)

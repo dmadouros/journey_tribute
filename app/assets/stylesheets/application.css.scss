@@ -7,37 +7,45 @@
 @import "bootstrap-sprockets";
 
 $navbar-border-radius: 0;
-$grid-float-breakpoint: 1250px;
+$grid-float-breakpoint: 1284px;
 
 @import "bootstrap";
 
 body {
-  //background-image: image-url("carbon_fiber.jpg")
-  background-color: white;
   padding-top: 51px;
 }
+
+/*
+ * Bootstrap overrides
+ */
+
+// make navbar content centered on large screens
+@media (min-width: $grid-float-breakpoint) {
+  .navbar-container {
+    margin: 0 auto;
+    width: $grid-float-breakpoint + 15px;
+
+    .navbar-header, .navbar-collapse {
+      float: none;
+      display: inline-block !important;
+    }
+  }
+}
+
+/*
+ * End bootstrap overrides
+ */
 
 h1 {
   font-family: "Matura MT Script Capitals";
   color: red;
 }
 
-.carousel-inner > .item > img {
-  margin: 0 auto;
-}
-
-.container {
-  background-color: white;
-}
-
-.header {
-  //background-color: #000;
-}
-
 .img-social-media {
   width: 40px;
   height: 40px;
 }
+
 .footer {
   margin-bottom: 20px;
 }
@@ -52,12 +60,15 @@ h1 {
   font-size: x-small;
 }
 
+
 .song {
   margin-bottom: 1em;
 }
+
 .song-title {
   font-weight: bold;
 }
+
 .song-writers {
   font-style: italic;
 }
