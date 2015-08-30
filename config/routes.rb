@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
   resources :shows
+  namespace :admin do
+    resources :venues
+    resources :shows
+  end
 
   root 'static_pages#home'
   get 'band' => 'static_pages#band'

@@ -1,0 +1,25 @@
+.container
+  .row
+    .col-med-12
+      %h1 Venues
+
+      .btn.btn-primary Add Venue
+
+      %table.table
+        %thead
+          %tr
+            %th Name
+            %th Address
+            %th City
+            %th State
+            %th Zip Code
+            %th Action
+        %tbody
+          - @venues.each do |venue|
+            %tr
+              %td= venue.name
+              %td= venue.address_1
+              %td= venue.city
+              %td= venue.state
+              %td= venue.zip_code
+              %td edit | delete

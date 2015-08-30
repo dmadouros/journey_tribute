@@ -1,0 +1,23 @@
+.container
+  .row
+    .col-med-12
+      %h1 Shows
+
+      .btn.btn-primary Add Show
+
+      %table.table
+        %thead
+          %tr
+            %th Starts At
+            %th Ends At
+            %th Name
+            %th Venue
+            %th Action
+        %tbody
+          - @shows.each do |show|
+            %tr
+              %td= show.starts_at
+              %td= show.ends_at
+              %td= show.name
+              %td #{show.venue.name}, #{show.venue.city}
+              %td edit | delete
