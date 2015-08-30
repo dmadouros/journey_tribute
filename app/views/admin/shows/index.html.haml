@@ -1,23 +1,24 @@
-.container
-  .row
-    .col-med-12
-      %h1 Shows
+%h1 Shows
 
-      .btn.btn-primary Add Show
+= link_to 'Add Show', new_admin_show_path, class: 'btn btn-primary'
 
-      %table.table
-        %thead
-          %tr
-            %th Starts At
-            %th Ends At
-            %th Name
-            %th Venue
-            %th Action
-        %tbody
-          - @shows.each do |show|
-            %tr
-              %td= show.starts_at
-              %td= show.ends_at
-              %td= show.name
-              %td #{show.venue.name}, #{show.venue.city}
-              %td edit | delete
+%table.table
+  %thead
+    %tr
+      %th Starts At
+      %th Ends At
+      %th Name
+      %th Venue
+      %th Action
+  %tbody
+    - @shows.each do |show|
+      %tr
+        %td= show.starts_at.strftime('%b %e, %Y %l:%M%P')
+        %td= show.ends_at.strftime('%b %e, %Y %l:%M%P') if show.ends_at.present?
+        %td= show.name
+        %td #{show.venue.name.presence || show.venue.city}
+        %td
+          %a{href: edit_admin_show_path(show)}
+            edit
+          \|
+          = link_to 'delete', admin_show_path(show), confirm: 'Are you sure?', method: :delete

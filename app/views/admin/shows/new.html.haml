@@ -1,0 +1,9 @@
+%h1 Add Show
+
+= bootstrap_form_for([:admin, @show]) do |f|
+  %fieldset
+    = f.datetime_select :starts_at, {ampm: true}, {class: 'form-control'}
+    = f.datetime_select :ends_at, {include_blank: true, ampm: true}, {class: 'form-control'}
+    = f.text_field :name, class: 'form-control'
+    = f.collection_select(:venue_id, @venues, :id, :name, {include_blank: true}, class: 'form-control')
+    = f.submit 'Submit', class: 'btn btn-primary'
