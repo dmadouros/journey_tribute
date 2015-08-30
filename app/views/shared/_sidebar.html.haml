@@ -12,55 +12,56 @@
     %li
       %a{href: 'https://plus.google.com/101369682168368969718/posts', target: 'new'}
         %img= image_tag('social_media/google_plus.png', class: 'img-social-media')
-- if @next_show.present?
-  .panel.panel-info
+.panels-sidebar
+  - if @next_show.present?
+    .panel.panel-info
+      .panel-heading
+        %strong Next Show
+      .panel-body
+        %span.date
+          = @next_show.starts_at.strftime('%A, %B %e, %Y')
+        %span.time
+          (
+          = @next_show.starts_at.strftime('%l:%M %P')
+          \-
+          = @next_show.ends_at.strftime('%l:%M %P')
+          )
+        %br
+        %strong
+          %span.show-name
+            = @next_show.name
+          (
+          %span.venue-name<>
+            = @next_show.venue.name
+          )
+        %br
+        %div.address_1
+          = @next_show.venue.address_1
+        %span
+          %span.city<>
+            = @next_show.venue.city
+          ,
+        %span.state
+          = @next_show.venue.state
+        %span.zip-code
+          = @next_show.venue.zip_code
+        %br
+        %br
+        %a.btn.btn-info
+          Details
+  .panel.panel-default
     .panel-heading
-      %strong Next Show
-    .panel-body
-      %span.date
-        = @next_show.starts_at.strftime('%A, %B %e, %Y')
-      %span.time
-        (
-        = @next_show.starts_at.strftime('%l:%M %P')
-        \-
-        = @next_show.ends_at.strftime('%l:%M %P')
-        )
-      %br
-      %strong
-        %span.show-name
-          = @next_show.name
-        (
-        %span.venue-name<>
-          = @next_show.venue.name
-        )
-      %br
-      %div.address_1
-        = @next_show.venue.address_1
+      Want more
       %span
-        %span.city<>
-          = @next_show.venue.city
-        ,
-      %span.state
-        = @next_show.venue.state
-      %span.zip-code
-        = @next_show.venue.zip_code
+        %strong.text-uppercase<>
+          = t('band.name.plain')
+        ?
+    .panel-body
+      Book
+      %strong.text-uppercase= t('band.name.plain')
+      for your next concert, corporate event, festival, private party, or club
+      now!
       %br
       %br
-      %a.btn.btn-info
-        Details
-.panel.panel-default
-  .panel-heading
-    Want more
-    %span
-      %strong.text-uppercase<>
-        = t('band.name.plain')
-      ?
-  .panel-body
-    Book
-    %strong.text-uppercase= t('band.name.plain')
-    for your next concert, corporate event, festival, private party, or club
-    now!
-    %br
-    %br
-    %a.btn.btn-primary{href: contact_path, role: 'button'}
-      Learn More
+      %a.btn.btn-primary{href: contact_path, role: 'button'}
+        Learn More

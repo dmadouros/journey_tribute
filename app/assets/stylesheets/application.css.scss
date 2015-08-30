@@ -3,6 +3,7 @@
 
 $navbar-border-radius: 0;
 $grid-float-breakpoint: 1284px;
+$navbar-inverse-brand-hover-color: #ff0000;
 
 @import "bootstrap";
 
@@ -31,9 +32,21 @@ body {
  * End bootstrap overrides
  */
 
+.navbar-brand.brand {
+  color: #cb0003;
+}
+
+.social-media {
+  padding-top: 15px;
+}
+
 .img-social-media {
   width: 40px;
   height: 40px;
+}
+
+.panels-sidebar {
+  margin-top: 5px;
 }
 
 .footer {
@@ -49,7 +62,6 @@ body {
   vertical-align: super;
   font-size: x-small;
 }
-
 
 .song {
   margin-bottom: 1em;
