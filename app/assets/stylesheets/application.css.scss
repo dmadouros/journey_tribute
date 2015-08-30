@@ -1,8 +1,3 @@
-@font-face {
-  font-family: "Matura MT Script Capitals";
-  src: font-url('maturasc.ttf') format('truetype');
-}
-
 // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
 @import "bootstrap-sprockets";
 
@@ -35,11 +30,6 @@ body {
 /*
  * End bootstrap overrides
  */
-
-h1 {
-  font-family: "Matura MT Script Capitals";
-  color: red;
-}
 
 .img-social-media {
   width: 40px;
