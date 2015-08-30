@@ -1,0 +1,32 @@
+#header.carousel.slide{"data-ride" => "carousel", 'data-pause' => 'false', 'data-keyboard' => 'false'}
+  %ol.carousel-indicators
+    %li{"data-target" => "#header", "data-slide-to" => "0", class: (['home', 'story', 'music'].include?(yield(:page)) ? 'active' : '')}
+    %li{"data-target" => "#header", "data-slide-to" => "1", class: (yield(:page) == 'band' ? 'active' : '')}
+    %li{"data-target" => "#header", "data-slide-to" => "2", class: (yield(:page) == 'media' ? 'active' : '')}
+    %li{"data-target" => "#header", "data-slide-to" => "3", class: (yield(:page) == 'shows' ? 'active' : '')}
+    %li{"data-target" => "#header", "data-slide-to" => "4", class: (yield(:page) == 'contact' ? 'active' : '')}
+    %li{"data-target" => "#header", "data-slide-to" => "5", class: (yield(:page) == 'press_kit' ? 'active' : '')}
+    %li{"data-target" => "#header", "data-slide-to" => "6"}
+
+  .carousel-inner{"role" => "listbox"}
+    .item{class: (['home', 'story', 'music'].include?(yield(:page)) ? 'active' : '')}
+      = image_tag('header/1_JTT_Logo.jpg', width: '1170', height: '200')
+    .item{class: (yield(:page) == 'band' ? 'active' : '')}
+      = image_tag('header/2_JTT_Amanda.jpg', width: '1170', height: '200')
+    .item{class: (yield(:page) == 'media' ? 'active' : '')}
+      = image_tag('header/3_JTT_Michael.jpg', width: '1170', height: '200')
+    .item{class: (yield(:page) == 'shows' ? 'active' : '')}
+      = image_tag('header/4_JTT_David.jpg', width: '1170', height: '200')
+    .item{class: (yield(:page) == 'contact' ? 'active' : '')}
+      = image_tag('header/5_JTT_James.jpg', width: '1170', height: '200')
+    .item{class: (yield(:page) == 'press_kit' ? 'active' : '')}
+      = image_tag('header/6_JTT_Rich.jpg', width: '1170', height: '200')
+    .item
+      = image_tag('header/7_JTT_FullBand.jpg', width: '1170', height: '200')
+
+  %a.left.carousel-control{"href" => "#header", "role" => "button", "data-slide" => "prev"}
+    %span.glyphicon.glyphicon-chevron-left{"aria-hidden" => "true"}
+    %span.sr-only Previous
+  %a.right.carousel-control{"href" => "#header", "role" => "button", "data-slide" => "next"}
+    %span.glyphicon.glyphicon-chevron-right{"aria-hidden" => "true"}
+    %span.sr-only Next

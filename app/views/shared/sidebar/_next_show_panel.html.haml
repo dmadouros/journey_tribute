@@ -1,0 +1,36 @@
+- if @next_show.present?
+  .panel.panel-info
+    .panel-heading
+      %strong Next Show
+    .panel-body
+      %span.date
+        = @next_show.starts_at.strftime('%A, %B %e, %Y')
+      %span.time
+        (
+        = @next_show.starts_at.strftime('%l:%M %P')
+        \-
+        = @next_show.ends_at.strftime('%l:%M %P')
+        )
+      %br
+      %strong
+        %span.show-name
+          = @next_show.name
+        (
+        %span.venue-name<>
+          = @next_show.venue.name
+        )
+      %br
+      %div.address_1
+        = @next_show.venue.address_1
+      %span
+        %span.city<>
+          = @next_show.venue.city
+        ,
+      %span.state
+        = @next_show.venue.state
+      %span.zip-code
+        = @next_show.venue.zip_code
+      %br
+      %br
+      %a.btn.btn-info
+        Details
