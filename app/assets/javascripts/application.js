@@ -26,6 +26,10 @@ var ready = function() {
     $('#past-shows-region').toggleClass('is-hidden');
     $('.past-dates').remove();
   });
+
+  $('.carousel').carousel({
+    interval: 5000
+  })
 };
 
 $(function() {

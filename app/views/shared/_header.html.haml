@@ -50,7 +50,7 @@
 .container
   .row
     .col-med-12
-      #header.carousel.slide{"data-ride" => "carousel", 'data-pause' => 'false'}
+      #header.carousel.slide{"data-ride" => "carousel", 'data-pause' => 'false', 'data-keyboard' => 'false'}
         %ol.carousel-indicators
           %li{"data-target" => "#header", "data-slide-to" => "0", class: (['home', 'story', 'music'].include?(yield(:page)) ? 'active' : '')}
           %li{"data-target" => "#header", "data-slide-to" => "1", class: (yield(:page) == 'band' ? 'active' : '')}
