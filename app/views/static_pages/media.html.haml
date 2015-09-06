@@ -43,70 +43,81 @@
         %li Who's Cryin' Now
 
 %h2 Photos
-%h3 Highlands Ranch Summer Concert Series
-%h3 Parker Days
-#parker-days.carousel.slide{"data-ride" => "carousel"}
-  %ol.carousel-indicators
-    %li.active{"data-target" => "#parker-days", "data-slide-to" => "0"}
+%h3 Leftapalooza (2015)
+.photos
+  .row
+    .col-md-12
+      = image_tag("shows/leftapalooza_2015/IMG_1316.JPG", class: 'img-responsive')
+  .row
+    .col-md-6
+      = image_tag("shows/leftapalooza_2015/IMG_1319.JPG", class: 'img-responsive')
+    .col-md-6
+      = image_tag("shows/leftapalooza_2015/IMG_1321.JPG", class: 'img-responsive')
+  .row
+    .col-md-6
+      = image_tag("shows/leftapalooza_2015/IMG_1332.JPG", class: 'img-responsive')
+    .col-md-6
+      = image_tag("shows/leftapalooza_2015/IMG_1336.JPG", class: 'img-responsive')
+-#%h3 Highlands Ranch Summer Concert Series
+-#%h3 Parker Days
+%h3 The Boulder Theater (2014))
+.photos
+  .row
+    .col-md-6
+      = image_tag("shows/boulder_theater/J1.jpg", class: 'img-responsive')
+    .col-md-6
+      = image_tag("shows/boulder_theater/Band2.jpg", class: 'img-responsive')
+      = image_tag("shows/boulder_theater/M2.jpg", class: 'img-responsive')
+  .row
+    .col-md-6
+      = image_tag("shows/boulder_theater/M1.jpg", class: 'img-responsive')
+      = image_tag("shows/boulder_theater/Band5.jpg", class: 'img-responsive')
+    .col-md-6
+      = image_tag("shows/boulder_theater/DD2.jpg", class: 'img-responsive')
+  .row
+    .col-md-6
+      = image_tag("shows/boulder_theater/DD6.jpg", class: 'img-responsive')
+    .col-md-6
+      = image_tag("shows/boulder_theater/J2.jpg", class: 'img-responsive')
 
-  .carousel-inner{"role" => "listbox"}
-    .item.active
-      %img{"src" => "http://www.eclipsetheband.biz/slides/ParkerDays.jpg"}
-
-  %a.left.carousel-control{"href" => "#parker-days", "role" => "button", "data-slide" => "prev"}
-    %span.glyphicon.glyphicon-chevron-left{"aria-hidden" => "true"}
-    %span.sr-only Previous
-  %a.right.carousel-control{"href" => "#parker-days", "role" => "button", "data-slide" => "next"}
-    %span.glyphicon.glyphicon-chevron-right{"aria-hidden" => "true"}
-    %span.sr-only Next
-%h3 The Boulder Theater
-#boulder-threater.carousel.slide{"data-ride" => "carousel"}
-  %ol.carousel-indicators
-    %li.active{"data-target" => "#boulder-threater", "data-slide-to" => "0"}
-    %li{"data-target" => "#boulder-threater", "data-slide-to" => "1"}
-    %li{"data-target" => "#boulder-threater", "data-slide-to" => "2"}
-    %li{"data-target" => "#boulder-threater", "data-slide-to" => "3"}
-    %li{"data-target" => "#boulder-threater", "data-slide-to" => "4"}
-    %li{"data-target" => "#boulder-threater", "data-slide-to" => "5"}
-    %li{"data-target" => "#boulder-threater", "data-slide-to" => "6"}
-    %li{"data-target" => "#boulder-threater", "data-slide-to" => "7"}
-
-  .carousel-inner{"role" => "listbox"}
-    .item.active
-      %img{"src" => "http://www.eclipsetheband.biz/slides/M1.jpg"}
-    .item
-      %img{"src" => "http://www.eclipsetheband.biz/slides/M2.jpg"}
-    .item
-      %img{"src" => "http://www.eclipsetheband.biz/slides/DD3.jpg"}
-    .item
-      %img{"src" => "http://www.eclipsetheband.biz/slides/DD5.jpg"}
-    .item
-      %img{"src" => "http://www.eclipsetheband.biz/slides/J1.jpg"}
-    .item
-      %img{"src" => "http://www.eclipsetheband.biz/slides/J2.jpg"}
-    .item
-      %img{"src" => "http://www.eclipsetheband.biz/slides/B1.jpg"}
-    .item
-      %img{"src" => "http://www.eclipsetheband.biz/slides/B2.jpg"}
-
-  %a.left.carousel-control{"href" => "#boulder-threater", "role" => "button", "data-slide" => "prev"}
-    %span.glyphicon.glyphicon-chevron-left{"aria-hidden" => "true"}
-    %span.sr-only Previous
-  %a.right.carousel-control{"href" => "#boulder-threater", "role" => "button", "data-slide" => "next"}
-    %span.glyphicon.glyphicon-chevron-right{"aria-hidden" => "true"}
-    %span.sr-only Next
+%h3 Leftapalooza (2013)
+.photos
+  .row
+    .col-md-12
+      = image_tag("shows/leftapalooza_2013/578963.jpg", class: 'img-responsive')
+  .row
+    .col-md-6
+      = image_tag("shows/leftapalooza_2013/971593.jpg", class: 'img-responsive')
+    .col-md-6
+      = image_tag("shows/leftapalooza_2013/1176330.jpg", class: 'img-responsive')
+  .row
+    .col-md-6
+      = image_tag("shows/leftapalooza_2013/1175433.jpg", class: 'img-responsive')
+    .col-md-6
+      = image_tag("shows/leftapalooza_2013/1150195.jpg", class: 'img-responsive')
+  .row
+    .col-md-12
+      = image_tag("shows/leftapalooza_2013/935879.jpg", class: 'img-responsive')
+%h3 Lakewood Summer Concert Series (2013)
+.photos
+  .row
+    .col-md-12
+      = image_tag("shows/lakewood/IMG_0423.jpg", class: 'img-responsive')
+  .row
+    .col-md-6
+      = image_tag("shows/lakewood/IMG_0417.jpg", class: 'img-responsive')
+    .col-md-6
+      = image_tag("shows/lakewood/IMG_0425.jpg", class: 'img-responsive')
 
 
-%h3 Lakewood Summer Concert Series
-%h3 Leftapalooza
-%h3 Highlands Ranch 4th of July Celebration
-%h3 The D-Note
+-#%h3 Highlands Ranch 4th of July Celebration
+-#%h3 The D-Note
 
 %h2 Videos
 %ul.list-inline
   %li.thumbnail
-    <iframe width="420" height="315" src="https://www.youtube.com/embed/tHrnY4mporo" frameborder="0" allowfullscreen></iframe>
+    <iframe width="750" height="562" src="https://www.youtube.com/embed/tHrnY4mporo" frameborder="0" allowfullscreen></iframe>
   %li.thumbnail
-    <iframe width="420" height="315" src="https://www.youtube.com/embed/ha-AbNM79Nw" frameborder="0" allowfullscreen></iframe>
+    <iframe width="750" height="562" src="https://www.youtube.com/embed/ha-AbNM79Nw" frameborder="0" allowfullscreen></iframe>
   %li.thumbnail
-    <iframe width="420" height="315" src="https://www.youtube.com/embed/y4QpQNoMHls" frameborder="0" allowfullscreen></iframe>
+    <iframe width="750" height="562" src="https://www.youtube.com/embed/y4QpQNoMHls" frameborder="0" allowfullscreen></iframe>

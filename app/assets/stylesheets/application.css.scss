@@ -94,3 +94,12 @@ h1 {
   font-size: 0.7em;
 
 }
+
+.photos {
+  img {
+    border: 1px solid #ddd;
+    padding: 4px;
+    margin: 4px;
+    border-radius: 4px;
+  }
+}
