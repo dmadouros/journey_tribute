@@ -19,4 +19,6 @@
         %td= venue.city
         %td= venue.state
         %td= venue.zip_code
-        %td edit | delete
+        %td
+          = link_to "edit", edit_admin_venue_path(venue)
+          |
