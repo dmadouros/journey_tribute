@@ -1,6 +1,6 @@
 %h1 Venues
 
-.btn.btn-primary Add Venue
+= link_to("Add Venue", new_admin_venue_path, {class: 'btn btn-primary'})
 
 %table.table
   %thead
@@ -22,3 +22,4 @@
         %td
           = link_to "edit", edit_admin_venue_path(venue)
           |
+          = link_to "delete", admin_venue_path(venue), method: :delete

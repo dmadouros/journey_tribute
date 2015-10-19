@@ -12,13 +12,7 @@
         = @next_show.ends_at.strftime('%l:%M %P')
         )
       %br
-      %strong
-        %span.show-name
-          = @next_show.name
-        (
-        %span.venue-name<>
-          = @next_show.venue.name
-        )
+      = next_show_name(@next_show)
       %br
       %div.address_1
         = @next_show.venue.address_1
@@ -30,6 +24,19 @@
         = @next_show.venue.state
       %span.zip-code
         = @next_show.venue.zip_code
+      %div.map-link
+        %a{href: @next_show.venue.map_link, target: '_blank'}
+          Map
+          %span.glyphicon.glyphicon-new-window{style: 'font-size: smaller;'}
+      %div.phone-number
+        = @next_show.venue.phone_number
+      %div.web-address
+        %a{href: "http://#{@next_show.venue.web_address}", target: '_blank'}
+          = @next_show.venue.web_address
+          %span.glyphicon.glyphicon-new-window{style: 'font-size: smaller;'}
+      %div.notes
+        %h5 Additional Notes
+        %div= @next_show.notes.html_safe
       %br
       %br
       %a.btn.btn-primary

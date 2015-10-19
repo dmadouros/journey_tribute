@@ -39,7 +39,7 @@ class Admin::ShowsController < Admin::AdminController
   private
 
   def show_params
-    params.require(:show).permit(:starts_at, :ends_at, :name, :venue_id)
+    params.require(:show).permit(:starts_at, :ends_at, :name, :venue_id, :notes)
   end
 
   class Venue < SimpleDelegator
