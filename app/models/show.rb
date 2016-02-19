@@ -6,10 +6,12 @@ class Show < ActiveRecord::Base
   end
 
   def self.current
-    Show.where('starts_at >= current_timestamp').order(starts_at: :asc)
+    now = Date.today
+
+    Show.where('starts_at >= ?', now + 1.day).order(starts_at: :asc)
   end
 
   def self.past
-    Show.where('starts_at < current_timestamp').order(starts_at: :desc)
+    Show.where('starts_at < ?', now + 1.day).order(starts_at: :desc)
   end
 end
