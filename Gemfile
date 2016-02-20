@@ -50,10 +50,13 @@ group :development, :test do
   gem 'sqlite3'
 
   gem 'dotenv-rails'
+
+  gem 'rspec-rails'
 end
 
 group :test do
   gem 'factory_girl_rails'
+  gem 'timecop'
 end
 
 group :production do

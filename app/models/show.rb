@@ -7,12 +7,14 @@ class Show < ActiveRecord::Base
   end
 
   def self.current
-    now = Date.today
+    now = Date.current.beginning_of_day
 
-    Show.where('starts_at >= ?', now - 1.day).order(starts_at: :asc)
+    Show.where('starts_at >= ?', now).order(starts_at: :asc)
   end
 
   def self.past
-    Show.where('starts_at < ?', now - 1.day).order(starts_at: :desc)
+    now = Date.current.beginning_of_day
+
+    Show.where('starts_at < ?', now).order(starts_at: :desc)
   end
 end

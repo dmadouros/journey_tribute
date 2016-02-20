@@ -6,6 +6,6 @@ class ApplicationController < ActionController::Base
   before_action :next_show
 
   def next_show
-    @next_show = Show.next.decorate
+    @next_show = Show.next.try(:decorate)
   end
 end
