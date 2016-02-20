@@ -33,9 +33,11 @@ ActiveRecord::Schema.define(version: 20160220200052) do
     t.datetime "ends_at"
     t.string   "name"
     t.integer  "venue_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
     t.string   "notes"
+    t.string   "cover"
+    t.string   "online_tickets_link"
   end
 
   add_index "shows", ["venue_id"], name: "index_shows_on_venue_id"
