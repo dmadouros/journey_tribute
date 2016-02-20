@@ -50,8 +50,9 @@
                     %a{href: additional_band.web_address, target: '_blank'}
                       = additional_band.name
                       %span.glyphicon.glyphicon-new-window{style: 'font-size: smaller;'}
-                  %span &mdash;
-                  %span.time= additional_band.time
+                  - if @additional_band.time
+                    %span &mdash;
+                    %span.time= additional_band.time
       %br
       %br
       %a.btn.btn-primary(href="details")
