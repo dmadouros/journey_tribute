@@ -1,0 +1,5 @@
+= bootstrap_form_for [:admin, @band] do |f|
+  %fieldset
+    = f.text_field :name
+    = f.text_field :web_address
+    = f.submit 'Submit', class: 'btn btn-primary'

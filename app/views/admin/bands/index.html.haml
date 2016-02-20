@@ -1,0 +1,17 @@
+%h1 Bands
+
+= link_to("Add Band", new_admin_band_path, {class: 'btn btn-primary'})
+
+%table.table
+  %thead
+    %tr
+      %th Name
+      %th Action
+  %tbody
+    - @bands.each do |band|
+      %tr
+        %td= band.name
+        %td
+          = link_to "edit", edit_admin_band_path(band)
+          |
+          = link_to "delete", admin_band_path(band), method: :delete
