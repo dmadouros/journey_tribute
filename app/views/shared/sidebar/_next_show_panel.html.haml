@@ -5,12 +5,7 @@
     .panel-body
       %span.date
         = @next_show.starts_at.strftime('%A, %B %e, %Y')
-      %span.time
-        (
-        = @next_show.starts_at.strftime('%l:%M %P')
-        \-
-        = @next_show.ends_at.strftime('%l:%M %P')
-        )
+      %span.time (#{@next_show.starts_at.strftime('%-l:%M%P')} - #{@next_show.ends_at.strftime('%-l:%M%P')})
       %br
       = next_show_name(@next_show)
       %br

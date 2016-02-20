@@ -1,0 +1,47 @@
+%section.show
+  %section.date-location
+    %div.datetime
+      %span.date= @show.date
+      %span.time (#{@show.time})
+    %div.event-name-venue= @show.name
+    %div.venue-address
+      %div= @show.venue.address_1
+      %div
+        %span #{@show.venue.city},
+        %span= @show.venue.state
+        %span= @show.venue.zip_code
+      %div.venue-map-link
+        %a{href: @show.venue.map_link, target: '_blank'}
+          Map
+          %span.glyphicon.glyphicon-new-window{style: 'font-size: smaller;'}
+      %div.venue-phone-number= @show.venue.phone_number
+      %div.venue-website-link
+        %a{href: "http://#{@show.venue.web_address}", target: '_blank'}
+          = @show.venue.web_address
+          %span.glyphicon.glyphicon-new-window{style: 'font-size: smaller;'}
+  %section.additional-details
+    %h2 Additional Details
+    %section.cover
+      %h3 Cover
+      %div= @show.cover
+      %div.online-tix-link
+        %a{href: "http://#{@show.online_tickets_link}", target: '_blank'}
+          Purchase tickets online
+          %span.glyphicon.glyphicon-new-window{style: 'font-size: smaller;'}
+    %section.additional-bands
+      %h3
+        Also appearing
+        = link_to("Add Band", new_admin_show_additional_band_path(@show), {class: 'btn btn-primary btn-xs'})
+      %ol.additional-bands
+        - @show.additional_bands.decorate.each do |additional_band|
+          %li.band
+            %span.band-name-link
+              %a{href: additional_band.web_address, target: '_blank'}
+                = additional_band.name
+                %span.glyphicon.glyphicon-new-window{style: 'font-size: smaller;'}
+            %span &mdash;
+            %span.time= additional_band.time
+            %div.btn-group.btn-group-xs
+              = link_to("Edit", edit_admin_show_additional_band_path(@show, additional_band), {class: 'btn btn-default btn-xs'})
+              = link_to("Delete", admin_show_additional_band_path(@show, additional_band), {data: {confirm: 'Are you sure?'}, method: :delete, class: 'btn btn-danger btn-xs'})
+

@@ -2,7 +2,9 @@ Rails.application.routes.draw do
   resources :shows
   namespace :admin do
     resources :venues
-    resources :shows
+    resources :shows do
+      resources :additional_bands
+    end
     resources :bands
   end
 

@@ -1,5 +1,6 @@
 class Show < ActiveRecord::Base
   belongs_to :venue
+  has_many :additional_bands
 
   def self.next
     current.first

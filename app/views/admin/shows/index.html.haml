@@ -18,6 +18,9 @@
         %td= show.name
         %td #{show.venue.name.presence || show.venue.city}
         %td
+          %a{href: admin_show_path(show)}
+            show
+          \|
           %a{href: edit_admin_show_path(show)}
             edit
           \|

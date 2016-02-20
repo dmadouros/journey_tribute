@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160220185525) do
+ActiveRecord::Schema.define(version: 20160220200052) do
+
+  create_table "additional_bands", force: :cascade do |t|
+    t.integer  "show_id"
+    t.datetime "starts_at"
+    t.datetime "ends_at"
+    t.integer  "band_id"
+  end
+
+  add_index "additional_bands", ["band_id"], name: "index_additional_bands_on_band_id"
+  add_index "additional_bands", ["show_id"], name: "index_additional_bands_on_show_id"
 
   create_table "bands", force: :cascade do |t|
     t.string "name"

@@ -3,6 +3,10 @@ class Admin::ShowsController < Admin::AdminController
     @shows = Show.all.order(starts_at: :desc)
   end
 
+  def show
+    @show = Show.find(params[:id]).decorate
+  end
+
   def new
     @show = Show.new
     @venues = ::Venue.all.map { |venue| Venue.new(venue) }.sort_by { |venue| venue.name }
