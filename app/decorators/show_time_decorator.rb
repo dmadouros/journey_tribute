@@ -7,7 +7,7 @@ class ShowTimeDecorator < Draper::Decorator
   end
 
   def time
-    return unless object.starts_at.present?
+    return "TBD" unless object.starts_at.present?
 
     "#{object.starts_at.strftime('%-l:%M%P')} - #{object.ends_at.strftime('%-l:%M%P')}"
   end

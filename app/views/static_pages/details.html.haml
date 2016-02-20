@@ -1,31 +1,36 @@
 %h1 Journey Thru Time (Journey Tribute Band)
-%h2 w/ Paradise Theater (Styx Tribute Band)
+- @next_show.additional_bands.decorate.each do |additional_band|
+  %h2 w/ #{additional_band.name}
 
-%h3 Friday, February 19, 2016
+%h3= @next_show.date
 %ul
   %li
-    %h4 7:30 - 9:00pm: Journey Thru Time
-  %li
-    %h4 9:30 - 11:00pm: Paradise Theater
+    %h4 #{@next_show.time}: Journey Thru Time
+  - @next_show.additional_bands.decorate.each do |additional_band|
+    %li
+      %h4 #{additional_band.time}: #{additional_band.name}
 
-%h3
-  Cover
-%p
-  $10.00 Advanced / $12.00 Day of the show
-%p
-  Tickets available online at:
-  %a(href="http://www.mcssl.com/store/10191914/february/journey-through-time-paradise-theater---feb-19-2016-730pm" target="_blank")http://www.mcssl.com/store/10191914/february/journey-through-time-paradise-theater---feb-19-2016-730pm
+- if @next_show.cover.present?
+  %h3
+    Cover
+  %p= @next_show.cover
+  - if @next_show.online_tickets_link.present?
+    %p
+      Tickets available online at:
+      %a{href: "http://#{@next_show.online_tickets_link}", target: '_blank'}
+        = @next_show.online_tickets_link
 
-%h3
-  Nissi's
+
+%h3= @next_show.name
 %p
-  2675 Northpark Drive
+  = @next_show.venue.address_1
   %br
-  Layfette, CO 80026
+  #{@next_show.venue.city}, #{@next_show.venue.state} #{@next_show.venue.zip_code}
   %br
-  303-665-2757
+  = @next_show.venue.phone_number
   %br
-  %a(href="http://www.nissis.com" target="_blank")www.nissis.com
+  %a{href: "http://#{@next_show.venue.web_address}", target: '_blank'}
+    = @next_show.venue.web_address
   %br
   %br
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3055.7821307499544!2d-105.13107738458835!3d40.01331387941398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876bf388ff454b69%3A0xdb4e84288d10120e!2s2675+Northpark+Dr%2C+Lafayette%2C+CO+80026!5e0!3m2!1sen!2sus!4v1454651292149" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+  %iframe{src: "https://www.google.com/maps/embed/v1/place?key=AIzaSyCEYmPJZko2z6jAhl-pDlCTdJe5QcatpqI&q=#{@next_show.venue.google_query}", width: "600", height: "450", frameborder: "0", style: "border:0", allowfullscreen: :allowfullscreen}
