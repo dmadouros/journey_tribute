@@ -103,3 +103,13 @@ h1 {
     border-radius: 4px;
   }
 }
+
+.panel ol.additional-bands {
+  margin: 0;
+  padding: 0;
+
+  & > li {
+    list-style-type: none;
+    font-size: smaller;
+  }
+}

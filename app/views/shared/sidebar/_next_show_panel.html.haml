@@ -4,10 +4,11 @@
       %strong Next Show
     .panel-body
       %span.date
-        = @next_show.starts_at.strftime('%A, %B %e, %Y')
-      %span.time (#{@next_show.starts_at.strftime('%-l:%M%P')} - #{@next_show.ends_at.strftime('%-l:%M%P')})
+        = @next_show.date
+      %span.time (#{@next_show.time})
       %br
-      = next_show_name(@next_show)
+      %strong
+        = @next_show.name
       %br
       %div.address_1
         = @next_show.venue.address_1
@@ -30,8 +31,25 @@
           = @next_show.venue.web_address
           %span.glyphicon.glyphicon-new-window{style: 'font-size: smaller;'}
       %div.notes
-        %h5 Additional Notes
-        %div= @next_show.notes.html_safe
+        %section.cover
+          %h5 Cover
+          %div= @next_show.cover
+          %div.online-tix-link
+            %a{href: "http://#{@next_show.online_tickets_link}", target: '_blank'}
+              Purchase tickets online
+              %span.glyphicon.glyphicon-new-window{style: 'font-size: smaller;'}
+        %section.additional-bands
+          %h5 Also appearing
+          %ol.additional-bands
+            - @next_show.additional_bands.decorate.each do |additional_band|
+              %li.band
+                %span.band-name-link
+                  %a{href: additional_band.web_address, target: '_blank'}
+                    = additional_band.name
+                    %span.glyphicon.glyphicon-new-window{style: 'font-size: smaller;'}
+                %span &mdash;
+                %span.time= additional_band.time
+
       %br
       %br
       %a.btn.btn-primary(href="details")
