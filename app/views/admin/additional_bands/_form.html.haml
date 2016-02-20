@@ -1,6 +1,6 @@
 = bootstrap_form_for([:admin, @show, @additional_band]) do |f|
   %fieldset
     = f.collection_select(:band_id, @bands, :id, :name, {include_blank: true}, class: 'form-control')
-    = f.datetime_select :starts_at, {ampm: true}, {class: 'form-control'}
+    = f.datetime_select :starts_at, {include_blank: true, ampm: true}, {class: 'form-control'}
     = f.datetime_select :ends_at, {include_blank: true, ampm: true}, {class: 'form-control'}
     = f.submit 'Submit', class: 'btn btn-primary'
