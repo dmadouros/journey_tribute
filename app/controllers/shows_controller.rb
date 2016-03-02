@@ -30,7 +30,7 @@ class ShowsController < ApplicationController
       )
     end
 
-    @shows = Show.current
-    @past = Show.past
+    @shows = Show.current.decorate
+    @past = Show.past.decorate
   end
 end
