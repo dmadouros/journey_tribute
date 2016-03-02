@@ -4,8 +4,4 @@ class StaticPagesController < ApplicationController
 
   def band
   end
-
-  def details
-    render layout: 'details'
-  end
 end

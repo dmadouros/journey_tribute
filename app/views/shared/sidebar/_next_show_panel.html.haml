@@ -54,6 +54,4 @@
                     %span &mdash;
                     %span.time= additional_band.time
       %br
-      %br
-      %a.btn.btn-primary(href="details")
-        Details
+      != link_to("Details", details_show_path(@next_show), {class: 'btn btn-primary'})

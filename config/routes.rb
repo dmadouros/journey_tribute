@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  resources :shows
+  resources :shows do
+    member do
+      get 'details'
+    end
+  end
   namespace :admin do
     resources :venues
     resources :shows do
@@ -10,7 +14,6 @@ Rails.application.routes.draw do
 
   root 'static_pages#home'
   get 'band' => 'static_pages#band'
-  get 'details' => 'static_pages#details'
   get 'media' => 'static_pages#media'
   get 'story' => 'static_pages#story'
   get 'billboard' => 'static_pages#music'

@@ -10,5 +10,4 @@
     =show.name
   - unless past
     %td
-      %a(href="details")
-        Details
+      != link_to("Details", details_show_path(show))

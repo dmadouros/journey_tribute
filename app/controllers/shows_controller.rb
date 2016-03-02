@@ -33,4 +33,10 @@ class ShowsController < ApplicationController
     @shows = Show.current.decorate
     @past = Show.past.decorate
   end
+
+  def details
+    @next_show = Show.find(params[:id]).decorate
+
+    render layout: 'details'
+  end
 end
