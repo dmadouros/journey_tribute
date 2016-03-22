@@ -6,11 +6,16 @@
         = t('band.name.plain')
       ?
   .panel-body
-    Book
-    %strong.text-uppercase= t('band.name.plain')
-    for your next concert, corporate event, festival, private party, or club
-    now!
+    %p
+      Book
+      %strong.text-uppercase= t('band.name.plain')
+      for your next concert, corporate event, festival, private party, or club
+      now!
     %br
+    %p
+      For contact information, please email Michael Miller at
+      %a{href: 'mailto:journeythrutime2@gmail.com'}
+        journeythrutime2@gmail.com
     %br
     %a.btn.btn-default{href: contact_path, role: 'button'}
       Learn More
