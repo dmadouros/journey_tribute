@@ -14,7 +14,8 @@ Rails.application.routes.draw do
 
   root 'static_pages#home'
   get 'band' => 'static_pages#band'
-  get 'media' => 'static_pages#media'
+  get 'photos' => 'static_pages#photos'
+  get 'videos' => 'static_pages#videos'
   get 'story' => 'static_pages#story'
   get 'billboard' => 'static_pages#music'
   get 'epk' => 'static_pages#epk'

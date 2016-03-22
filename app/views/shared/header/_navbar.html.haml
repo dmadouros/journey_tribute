@@ -18,9 +18,12 @@
           %li{class: (yield(:page) == 'band' ? 'active' : '')}
             %a{href: band_path}
               The Band
-          %li{class: (yield(:page) == 'media' ? 'active' : '')}
-            %a{href: media_path}
-              Media
+          %li{class: (yield(:page) == 'photos' ? 'active' : '')}
+            %a{href: photos_path}
+              Photos
+          %li{class: (yield(:page) == 'videos' ? 'active' : '')}
+            %a{href: videos_path}
+              Videos
           %li{class: (yield(:page) == 'shows' ? 'active' : '')}
             %a{href: calendar_path}
               Calendar
