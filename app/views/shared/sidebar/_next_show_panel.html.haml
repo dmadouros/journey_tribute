@@ -9,49 +9,50 @@
       %br
       %strong
         = @next_show.name
-      %br
-      %div.address_1
-        = @next_show.venue.address_1
-      %span
-        %span.city<>
-          = @next_show.venue.city
-        ,
-      %span.state
-        = @next_show.venue.state
-      %span.zip-code
-        = @next_show.venue.zip_code
-      %div.map-link
-        %a{href: @next_show.venue.map_link, target: '_blank'}
-          Map
-          %span.glyphicon.glyphicon-new-window{style: 'font-size: smaller;'}
-      %div.phone-number
-        = @next_show.venue.phone_number
-      - if @next_show.venue.web_address
-        %div.web-address
-          %a{href: "http://#{@next_show.venue.web_address}", target: '_blank'}
-            = @next_show.venue.web_address
+      - unless @next_show.private_party?
+        %br
+        %div.address_1
+          = @next_show.venue.address_1
+        %span
+          %span.city<>
+            = @next_show.venue.city
+          ,
+        %span.state
+          = @next_show.venue.state
+        %span.zip-code
+          = @next_show.venue.zip_code
+        %div.map-link
+          %a{href: @next_show.venue.map_link, target: '_blank'}
+            Map
             %span.glyphicon.glyphicon-new-window{style: 'font-size: smaller;'}
-      %div.notes
-        - if @next_show.cover.present?
-          %section.cover
-            %h5 Cover
-            %div= @next_show.cover
-            %div.online-tix-link
-              %a{href: "http://#{@next_show.online_tickets_link}", target: '_blank'}
-                Purchase tickets online
-                %span.glyphicon.glyphicon-new-window{style: 'font-size: smaller;'}
-        - if @next_show.additional_bands.present?
-          %section.additional-bands
-            %h5 Also appearing
-            %ol.additional-bands
-              - @next_show.additional_bands.decorate.each do |additional_band|
-                %li.band
-                  %span.band-name-link
-                    %a{href: additional_band.web_address, target: '_blank'}
-                      = additional_band.name
-                      %span.glyphicon.glyphicon-new-window{style: 'font-size: smaller;'}
-                  - if additional_band.time
-                    %span &mdash;
-                    %span.time= additional_band.time
-      %br
-      != link_to("Details", details_show_path(@next_show), {class: 'btn btn-primary'})
+        %div.phone-number
+          = @next_show.venue.phone_number
+        - if @next_show.venue.web_address
+          %div.web-address
+            %a{href: "http://#{@next_show.venue.web_address}", target: '_blank'}
+              = @next_show.venue.web_address
+              %span.glyphicon.glyphicon-new-window{style: 'font-size: smaller;'}
+        %div.notes
+          - if @next_show.cover.present?
+            %section.cover
+              %h5 Cover
+              %div= @next_show.cover
+              %div.online-tix-link
+                %a{href: "http://#{@next_show.online_tickets_link}", target: '_blank'}
+                  Purchase tickets online
+                  %span.glyphicon.glyphicon-new-window{style: 'font-size: smaller;'}
+          - if @next_show.additional_bands.present?
+            %section.additional-bands
+              %h5 Also appearing
+              %ol.additional-bands
+                - @next_show.additional_bands.decorate.each do |additional_band|
+                  %li.band
+                    %span.band-name-link
+                      %a{href: additional_band.web_address, target: '_blank'}
+                        = additional_band.name
+                        %span.glyphicon.glyphicon-new-window{style: 'font-size: smaller;'}
+                    - if additional_band.time
+                      %span &mdash;
+                      %span.time= additional_band.time
+        %br
+        != link_to("Details", details_show_path(@next_show), {class: 'btn btn-primary'})

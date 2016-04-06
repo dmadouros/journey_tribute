@@ -8,6 +8,6 @@
     =show.venue.city
   %td
     =show.name
-  - unless past
+  - unless past || show.private_party?
     %td
       != link_to("Details", details_show_path(show))

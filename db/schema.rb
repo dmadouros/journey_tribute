@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160220200052) do
+ActiveRecord::Schema.define(version: 20160406071408) do
 
   create_table "additional_bands", force: :cascade do |t|
     t.integer  "show_id"
@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(version: 20160220200052) do
     t.string   "notes"
     t.string   "cover"
     t.string   "online_tickets_link"
+    t.boolean  "private_party"
   end
 
   add_index "shows", ["venue_id"], name: "index_shows_on_venue_id"
