@@ -7,13 +7,13 @@ class Show < ActiveRecord::Base
   end
 
   def self.current
-    now = Date.current.beginning_of_day
+    now = Time.current.in_time_zone("Mountain Time (US & Canada)").beginning_of_day
 
     Show.where('starts_at >= ?', now).order(starts_at: :asc)
   end
 
   def self.past
-    now = Date.current.beginning_of_day
+    now = Time.current.in_time_zone("Mountain Time (US & Canada)").beginning_of_day
 
     Show.where('starts_at < ?', now).order(starts_at: :desc)
   end
