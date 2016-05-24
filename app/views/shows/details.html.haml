@@ -10,6 +10,11 @@
     %li
       %h4 #{additional_band.time}: #{additional_band.name}
 
+- if @next_show.notes.present?
+  %h3
+    Notes
+  %p!= @next_show.notes
+
 - if @next_show.cover.present?
   %h3
     Cover
